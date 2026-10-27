@@ -38,15 +38,15 @@ const eventOutputSchema = z.object({
 });
 
 function getOpenAIModel(): ChatOpenAI {
-  const apiKey = process.env.AI_INTEGRATIONS_OPENAI_API_KEY;
-  const baseURL = process.env.AI_INTEGRATIONS_OPENAI_BASE_URL;
-  if (!apiKey || !baseURL) {
-    throw new Error("OpenAI AI Integrations are not configured for this server.");
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    throw new Error("Set OPENAI_API_KEY in runtime secrets to enable the assistant.");
   }
   return new ChatOpenAI({
-    model: "gpt-5.6-terra",
+    model: process.env.OPENAI_MODEL || "gpt-5.4",
     apiKey,
-    configuration: { baseURL },
+    configuration: { baseURL: "https://api.openai.com/v1" },
+    useResponsesApi: true,
     modelKwargs: { max_output_tokens: 8192 },
     maxRetries: 3,
   });

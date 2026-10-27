@@ -7,6 +7,7 @@ import os
 import pandas as pd
 import streamlit as st
 
+from assistant_errors import assistant_error_message
 from operations_data import city_names, filter_rows, get_overview, load_operations_data
 
 
@@ -246,13 +247,10 @@ def render_assistant() -> None:
         "The Python LangGraph agent can query staffing, backtest, and sensitivity "
         "data, simulate crew changes, and extract event facts."
     )
-    if not (
-        os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
-        or os.environ.get("OPENAI_API_KEY")
-    ):
+    if not os.environ.get("OPENAI_API_KEY"):
         st.warning(
-            "Connect the OpenAI integration or add OPENAI_API_KEY through runtime "
-            "secrets to enable chat. Do not paste keys into the app or notebook."
+            "Add OPENAI_API_KEY through runtime secrets to enable chat. "
+            "Do not paste keys into the app or notebook."
         )
 
     if "operations_chat" not in st.session_state:
@@ -291,10 +289,7 @@ def render_assistant() -> None:
             st.session_state.operations_chat.append(
                 {
                     "role": "assistant",
-                    "content": (
-                        "The assistant could not complete that request. "
-                        f"Details: {exc}"
-                    ),
+                    "content": assistant_error_message(exc),
                 }
             )
         st.rerun()
@@ -326,7 +321,7 @@ def render_assistant() -> None:
                 else:
                     st.info("No event records were stated in that text.")
             except Exception as exc:
-                st.error(f"Event text could not be processed: {exc}")
+                st.error(assistant_error_message(exc))
 
 
 if section == "Overview":

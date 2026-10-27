@@ -79,7 +79,10 @@ router.post("/agent/chat", async (req, res): Promise<void> => {
     const response = await askOperationsAgent(body.data);
     res.json(AskOperationsAgentResponse.parse(response));
   } catch (error) {
-    req.log.error({ err: error }, "Operations agent request failed");
+    req.log.error(
+      { errorType: error instanceof Error ? error.name : "UnknownError" },
+      "Operations agent request failed",
+    );
     res.status(502).json({
       error: "The operations assistant is temporarily unavailable. Please try again.",
     });
@@ -96,7 +99,10 @@ router.post("/operations/events/extract", async (req, res): Promise<void> => {
     const events = await extractStructuredEvents(body.data.sourceText);
     res.json(ExtractEventDetailsResponse.parse(events));
   } catch (error) {
-    req.log.error({ err: error }, "Event text extraction failed");
+    req.log.error(
+      { errorType: error instanceof Error ? error.name : "UnknownError" },
+      "Event text extraction failed",
+    );
     res.status(502).json({
       error: "Event text could not be processed right now. Please try again.",
     });

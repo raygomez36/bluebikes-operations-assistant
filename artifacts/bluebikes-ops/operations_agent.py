@@ -68,26 +68,20 @@ class EventExtraction(BaseModel):
 
 
 def _get_model() -> ChatOpenAI:
-    api_key = (
-        os.environ.get("AI_INTEGRATIONS_OPENAI_API_KEY")
-        or os.environ.get("OPENAI_API_KEY")
-    )
-    base_url = os.environ.get("AI_INTEGRATIONS_OPENAI_BASE_URL")
+    api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError(
-            "OpenAI is not configured. Connect the Replit OpenAI integration "
-            "or set OPENAI_API_KEY in your runtime secrets."
+            "Set OPENAI_API_KEY in your runtime secrets to enable the assistant."
         )
 
     options = {
-        "model": os.environ.get("OPENAI_MODEL", "gpt-5.6-terra"),
+        "model": os.environ.get("OPENAI_MODEL", "gpt-5.4"),
         "api_key": api_key,
+        "base_url": "https://api.openai.com/v1",
         "max_retries": 3,
         "use_responses_api": True,
         "model_kwargs": {"max_output_tokens": 8192},
     }
-    if base_url:
-        options["base_url"] = base_url
     return ChatOpenAI(**options)
 
 
