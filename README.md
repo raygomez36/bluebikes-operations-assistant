@@ -23,9 +23,8 @@ the managed `PORT` and serves the root preview.
 ## Configure AI access
 
 The assistant uses your own `OPENAI_API_KEY` and calls OpenAI directly at
-`https://api.openai.com/v1`. It does not use the Replit AI proxy or its credentials.
+`https://api.openai.com/v1`.
 
-- In Replit, save `OPENAI_API_KEY` in project Secrets.
 - In Streamlit Community Cloud, add it in the app's Secrets settings using a
   top-level TOML string. Streamlit exposes top-level string secrets as environment
   variables. Secrets do not transfer from Replit or GitHub automatically.
