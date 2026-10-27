@@ -1,0 +1,157 @@
+month,month_name,city,forecast_trip_starts,forecast_rebalance_proxy_bikes,total_crews_needed,full_time_crews,seasonal_crews,seasonal_hires,seasonal_releases,hire_by,contract_note
+1,January,Arlington,478.0,39.786160714285714,1,1,0,0,0,,No seasonal staffing change
+2,February,Arlington,538.5,77.72433035714286,1,1,0,0,0,,No seasonal staffing change
+3,March,Arlington,976.5,69.57142857142857,1,1,0,0,0,,No seasonal staffing change
+4,April,Arlington,1379.0,114.03191964285715,1,1,0,0,0,,No seasonal staffing change
+5,May,Arlington,1866.5,192.4084821428571,1,1,0,0,0,,No seasonal staffing change
+6,June,Arlington,2278.5,137.40357142857144,1,1,0,0,0,,No seasonal staffing change
+7,July,Arlington,2396.5,181.97276785714286,1,1,0,0,0,,No seasonal staffing change
+8,August,Arlington,2426.5,171.2109375,1,1,0,0,0,,No seasonal staffing change
+9,September,Arlington,2480.5,195.23482142857142,1,1,0,0,0,,No seasonal staffing change
+10,October,Arlington,2331.5,185.8861607142857,1,1,0,0,0,,No seasonal staffing change
+11,November,Arlington,1575.5,125.01116071428571,1,1,0,0,0,,No seasonal staffing change
+12,December,Arlington,838.5,66.52767857142857,1,1,0,0,0,,No seasonal staffing change
+1,January,Boston,82821.0,3355.0821428571426,5,5,0,0,0,,No seasonal staffing change
+2,February,Boston,95561.5,4234.073660714286,7,5,2,2,0,2025-12,Hire 2 seasonal crew(s) by 2025-12
+3,March,Boston,136281.0,5002.511830357143,8,5,3,1,0,2026-01,Hire 1 seasonal crew(s) by 2026-01
+4,April,Boston,192621.0,6106.3060267857145,9,5,4,1,0,2026-02,Hire 1 seasonal crew(s) by 2026-02
+5,May,Boston,231945.0,7083.784598214286,11,5,6,2,0,2026-03,Hire 2 seasonal crew(s) by 2026-03
+6,June,Boston,272097.0,6907.573214285714,10,5,5,0,1,,Release 1 seasonal crew(s) by 2026-06
+7,July,Boston,302100.5,6998.01607142857,10,5,5,0,0,,No seasonal staffing change
+8,August,Boston,304674.5,8106.702008928571,12,5,7,2,0,2026-06,Hire 2 seasonal crew(s) by 2026-06
+9,September,Boston,318795.5,8030.282142857142,12,5,7,0,0,,No seasonal staffing change
+10,October,Boston,295498.5,8615.986607142857,13,5,8,1,0,2026-08,Hire 1 seasonal crew(s) by 2026-08
+11,November,Boston,198408.5,6991.385044642857,10,5,5,0,3,,Release 3 seasonal crew(s) by 2026-11
+12,December,Boston,101110.0,3918.6107142857145,6,5,1,0,4,,Release 4 seasonal crew(s) by 2026-12
+1,January,Brookline,4061.0,77.83303571428571,1,1,0,0,0,,No seasonal staffing change
+2,February,Brookline,4838.5,121.20647321428571,1,1,0,0,0,,No seasonal staffing change
+3,March,Brookline,6829.5,160.99263392857142,1,1,0,0,0,,No seasonal staffing change
+4,April,Brookline,8787.5,229.91183035714283,1,1,0,0,0,,No seasonal staffing change
+5,May,Brookline,10598.5,444.06138392857144,1,1,0,0,0,,No seasonal staffing change
+6,June,Brookline,11497.5,416.2328125,1,1,0,0,0,,No seasonal staffing change
+7,July,Brookline,12394.0,327.203125,1,1,0,0,0,,No seasonal staffing change
+8,August,Brookline,12865.0,393.5133928571429,1,1,0,0,0,,No seasonal staffing change
+9,September,Brookline,13889.0,433.08214285714286,1,1,0,0,0,,No seasonal staffing change
+10,October,Brookline,13056.5,314.70200892857144,1,1,0,0,0,,No seasonal staffing change
+11,November,Brookline,9037.5,130.98995535714283,1,1,0,0,0,,No seasonal staffing change
+12,December,Brookline,4778.0,109.575,1,1,0,0,0,,No seasonal staffing change
+1,January,Cambridge,59959.5,1375.8837053571428,2,2,0,0,0,,No seasonal staffing change
+2,February,Cambridge,77896.0,1629.4933035714284,3,2,1,1,0,2025-12,Hire 1 seasonal crew(s) by 2025-12
+3,March,Cambridge,94038.0,1977.8939732142858,3,2,1,0,0,,No seasonal staffing change
+4,April,Cambridge,123378.0,2029.4203125,3,2,1,0,0,,No seasonal staffing change
+5,May,Cambridge,141316.0,2670.3470982142853,4,2,2,1,0,2026-03,Hire 1 seasonal crew(s) by 2026-03
+6,June,Cambridge,143304.5,2734.5919642857143,4,2,2,0,0,,No seasonal staffing change
+7,July,Cambridge,164921.5,2921.8912946428572,5,2,3,1,0,2026-05,Hire 1 seasonal crew(s) by 2026-05
+8,August,Cambridge,163475.5,3048.6417410714284,5,2,3,0,0,,No seasonal staffing change
+9,September,Cambridge,187045.5,3336.8196428571428,5,2,3,0,0,,No seasonal staffing change
+10,October,Cambridge,173179.0,3201.3727678571427,5,2,3,0,0,,No seasonal staffing change
+11,November,Cambridge,125703.5,2387.169642857143,4,2,2,0,1,,Release 1 seasonal crew(s) by 2026-11
+12,December,Cambridge,63937.0,1387.080357142857,2,2,0,0,2,,Release 2 seasonal crew(s) by 2026-12
+1,January,Chelsea,145.0,23.262946428571425,1,1,0,0,0,,No seasonal staffing change
+2,February,Chelsea,158.5,32.068080357142854,1,1,0,0,0,,No seasonal staffing change
+3,March,Chelsea,301.0,29.459151785714283,1,1,0,0,0,,No seasonal staffing change
+4,April,Chelsea,334.5,49.89575892857143,1,1,0,0,0,,No seasonal staffing change
+5,May,Chelsea,515.5,66.85379464285714,1,1,0,0,0,,No seasonal staffing change
+6,June,Chelsea,639.0,88.05133928571428,1,1,0,0,0,,No seasonal staffing change
+7,July,Chelsea,747.5,75.11540178571428,1,1,0,0,0,,No seasonal staffing change
+8,August,Chelsea,780.5,87.5078125,1,1,0,0,0,,No seasonal staffing change
+9,September,Chelsea,716.0,107.40089285714285,1,1,0,0,0,,No seasonal staffing change
+10,October,Chelsea,614.5,93.48660714285714,1,1,0,0,0,,No seasonal staffing change
+11,November,Chelsea,363.5,72.83258928571428,1,1,0,0,0,,No seasonal staffing change
+12,December,Chelsea,193.5,38.699107142857144,1,1,0,0,0,,No seasonal staffing change
+1,January,Everett,547.0,62.396874999999994,1,1,0,0,0,,No seasonal staffing change
+2,February,Everett,627.0,74.46316964285714,1,1,0,0,0,,No seasonal staffing change
+3,March,Everett,1092.5,96.74776785714286,1,1,0,0,0,,No seasonal staffing change
+4,April,Everett,1417.5,130.77254464285716,1,1,0,0,0,,No seasonal staffing change
+5,May,Everett,2182.5,149.46986607142856,1,1,0,0,0,,No seasonal staffing change
+6,June,Everett,2613.5,195.12611607142856,1,1,0,0,0,,No seasonal staffing change
+7,July,Everett,2836.0,227.19419642857142,1,1,0,0,0,,No seasonal staffing change
+8,August,Everett,3027.5,204.36607142857144,1,1,0,0,0,,No seasonal staffing change
+9,September,Everett,2815.5,179.14642857142854,1,1,0,0,0,,No seasonal staffing change
+10,October,Everett,2395.0,158.16629464285714,1,1,0,0,0,,No seasonal staffing change
+11,November,Everett,1475.5,94.57366071428572,1,1,0,0,0,,No seasonal staffing change
+12,December,Everett,740.5,78.70267857142856,1,1,0,0,0,,No seasonal staffing change
+1,January,Malden,214.0,18.2625,1,1,0,0,0,,No seasonal staffing change
+2,February,Malden,171.5,27.176339285714285,1,1,0,0,0,,No seasonal staffing change
+3,March,Malden,340.0,34.45959821428571,1,1,0,0,0,,No seasonal staffing change
+4,April,Malden,476.0,25.1109375,1,1,0,0,0,,No seasonal staffing change
+5,May,Malden,867.5,94.03013392857143,1,1,0,0,0,,No seasonal staffing change
+6,June,Malden,1132.5,80.44196428571428,1,1,0,0,0,,No seasonal staffing change
+7,July,Malden,1236.5,90.76897321428572,1,1,0,0,0,,No seasonal staffing change
+8,August,Malden,1403.0,84.79017857142857,1,1,0,0,0,,No seasonal staffing change
+9,September,Malden,1205.0,60.005357142857136,1,1,0,0,0,,No seasonal staffing change
+10,October,Malden,1049.0,49.4609375,1,1,0,0,0,,No seasonal staffing change
+11,November,Malden,680.0,29.350446428571427,1,1,0,0,0,,No seasonal staffing change
+12,December,Malden,359.5,38.26428571428571,1,1,0,0,0,,No seasonal staffing change
+1,January,Medford,607.5,55.54843749999999,1,1,0,0,0,,No seasonal staffing change
+2,February,Medford,590.0,53.809151785714285,1,1,0,0,0,,No seasonal staffing change
+3,March,Medford,1003.5,76.63727678571428,1,1,0,0,0,,No seasonal staffing change
+4,April,Medford,1269.0,132.29441964285715,1,1,0,0,0,,No seasonal staffing change
+5,May,Medford,1984.5,164.14508928571428,1,1,0,0,0,,No seasonal staffing change
+6,June,Medford,2213.5,219.47611607142858,1,1,0,0,0,,No seasonal staffing change
+7,July,Medford,2293.0,205.12700892857146,1,1,0,0,0,,No seasonal staffing change
+8,August,Medford,2538.5,250.5658482142857,1,1,0,0,0,,No seasonal staffing change
+9,September,Medford,2592.0,264.80625,1,1,0,0,0,,No seasonal staffing change
+10,October,Medford,2145.5,185.34263392857144,1,1,0,0,0,,No seasonal staffing change
+11,November,Medford,1503.5,124.46763392857142,1,1,0,0,0,,No seasonal staffing change
+12,December,Medford,793.0,95.22589285714285,1,1,0,0,0,,No seasonal staffing change
+1,January,Newton,90.0,2.6089285714285717,1,1,0,0,0,,No seasonal staffing change
+2,February,Newton,164.5,5.435267857142857,1,1,0,0,0,,No seasonal staffing change
+3,March,Newton,437.5,42.721205357142864,1,1,0,0,0,,No seasonal staffing change
+4,April,Newton,1159.0,94.03013392857142,1,1,0,0,0,,No seasonal staffing change
+5,May,Newton,1341.5,111.42299107142857,1,1,0,0,0,,No seasonal staffing change
+6,June,Newton,1387.0,107.61830357142857,1,1,0,0,0,,No seasonal staffing change
+7,July,Newton,1574.5,94.57366071428571,1,1,0,0,0,,No seasonal staffing change
+8,August,Newton,1737.5,84.24665178571428,1,1,0,0,0,,No seasonal staffing change
+9,September,Newton,1920.0,120.44553571428571,1,1,0,0,0,,No seasonal staffing change
+10,October,Newton,1742.0,84.79017857142856,1,1,0,0,0,,No seasonal staffing change
+11,November,Newton,1123.0,84.24665178571428,1,1,0,0,0,,No seasonal staffing change
+12,December,Newton,392.5,45.221428571428575,1,1,0,0,0,,No seasonal staffing change
+1,January,Revere,51.5,12.174999999999999,1,1,0,0,0,,No seasonal staffing change
+2,February,Revere,59.5,16.30580357142857,1,1,0,0,0,,No seasonal staffing change
+3,March,Revere,177.5,30.76361607142857,1,1,0,0,0,,No seasonal staffing change
+4,April,Revere,351.5,48.26517857142858,1,1,0,0,0,,No seasonal staffing change
+5,May,Revere,527.5,77.18080357142857,1,1,0,0,0,,No seasonal staffing change
+6,June,Revere,853.0,102.9439732142857,1,1,0,0,0,,No seasonal staffing change
+7,July,Revere,1020.0,109.575,1,1,0,0,0,,No seasonal staffing change
+8,August,Revere,1046.5,91.3125,1,1,0,0,0,,No seasonal staffing change
+9,September,Revere,722.5,86.96428571428572,1,1,0,0,0,,No seasonal staffing change
+10,October,Revere,547.0,42.395089285714285,1,1,0,0,0,,No seasonal staffing change
+11,November,Revere,275.0,39.13392857142857,1,1,0,0,0,,No seasonal staffing change
+12,December,Revere,119.5,27.82857142857143,1,1,0,0,0,,No seasonal staffing change
+1,January,Salem,160.5,37.50334821428571,1,1,0,0,0,,No seasonal staffing change
+2,February,Salem,218.0,39.677455357142854,1,1,0,0,0,,No seasonal staffing change
+3,March,Salem,372.5,55.222321428571426,1,1,0,0,0,,No seasonal staffing change
+4,April,Salem,602.5,69.57142857142857,1,1,0,0,0,,No seasonal staffing change
+5,May,Salem,919.0,82.07254464285714,1,1,0,0,0,,No seasonal staffing change
+6,June,Salem,1115.5,85.11629464285714,1,1,0,0,0,,No seasonal staffing change
+7,July,Salem,1504.5,100.00892857142857,1,1,0,0,0,,No seasonal staffing change
+8,August,Salem,1483.0,109.79241071428571,1,1,0,0,0,,No seasonal staffing change
+9,September,Salem,2004.5,133.05535714285713,1,1,0,0,0,,No seasonal staffing change
+10,October,Salem,3133.0,222.84598214285714,1,1,0,0,0,,No seasonal staffing change
+11,November,Salem,809.5,76.63727678571428,1,1,0,0,0,,No seasonal staffing change
+12,December,Salem,252.5,40.003571428571426,1,1,0,0,0,,No seasonal staffing change
+1,January,Somerville,9988.0,196.64799107142858,1,1,0,0,0,,No seasonal staffing change
+2,February,Somerville,11158.5,329.3772321428571,1,1,0,0,0,,No seasonal staffing change
+3,March,Somerville,16746.5,343.83504464285716,1,1,0,0,0,,No seasonal staffing change
+4,April,Somerville,22192.5,506.784375,1,1,0,0,0,,No seasonal staffing change
+5,May,Somerville,28457.0,951.171875,2,1,1,1,0,2026-03,Hire 1 seasonal crew(s) by 2026-03
+6,June,Somerville,30977.5,851.5977678571428,2,1,1,0,0,,No seasonal staffing change
+7,July,Somerville,33177.5,843.2274553571428,2,1,1,0,0,,No seasonal staffing change
+8,August,Somerville,33251.0,1064.7689732142858,2,1,1,0,0,,No seasonal staffing change
+9,September,Somerville,33575.5,914.4294642857144,2,1,1,0,0,,No seasonal staffing change
+10,October,Somerville,30799.0,753.8716517857142,2,1,1,0,0,,No seasonal staffing change
+11,November,Somerville,21880.5,375.0334821428571,1,1,0,0,1,,Release 1 seasonal crew(s) by 2026-11
+12,December,Somerville,11870.0,255.2401785714286,1,1,0,0,0,,No seasonal staffing change
+1,January,Watertown,435.5,58.04866071428572,1,1,0,0,0,,No seasonal staffing change
+2,February,Watertown,502.0,62.50558035714286,1,1,0,0,0,,No seasonal staffing change
+3,March,Watertown,855.0,60.440178571428575,1,1,0,0,0,,No seasonal staffing change
+4,April,Watertown,1260.0,41.63415178571428,1,1,0,0,0,,No seasonal staffing change
+5,May,Watertown,1727.5,85.87723214285714,1,1,0,0,0,,No seasonal staffing change
+6,June,Watertown,2034.5,74.78928571428571,1,1,0,0,0,,No seasonal staffing change
+7,July,Watertown,2231.0,115.55379464285714,1,1,0,0,0,,No seasonal staffing change
+8,August,Watertown,2247.0,158.16629464285714,1,1,0,0,0,,No seasonal staffing change
+9,September,Watertown,2119.0,145.66517857142856,1,1,0,0,0,,No seasonal staffing change
+10,October,Watertown,1898.0,133.70758928571428,1,1,0,0,0,,No seasonal staffing change
+11,November,Watertown,1169.5,69.02790178571428,1,1,0,0,0,,No seasonal staffing change
+12,December,Watertown,606.0,68.7017857142857,1,1,0,0,0,,No seasonal staffing change

@@ -1,0 +1,388 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: operations
+    description: Bluebikes staffing forecast and backtest data
+  - name: agent
+    description: LangGraph operations assistant
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /operations/overview:
+    get:
+      operationId: getOperationsOverview
+      tags: [operations]
+      summary: Get staffing forecast overview
+      responses:
+        "200":
+          description: Overview metrics and model assumptions
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperationsOverview"
+  /operations/staffing:
+    get:
+      operationId: getStaffingPlan
+      tags: [operations]
+      summary: Get monthly staffing plan
+      parameters:
+        - in: query
+          name: city
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: City-month staffing rows
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StaffingMonth"
+  /operations/backtest:
+    get:
+      operationId: getBacktest
+      tags: [operations]
+      summary: Compare the staffing plan with January to September 2026 actuals
+      parameters:
+        - in: query
+          name: city
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: City-month backtest rows
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/BacktestMonth"
+  /operations/sensitivity:
+    get:
+      operationId: getSensitivity
+      tags: [operations]
+      summary: Get ridership and e-bike sensitivity scenarios
+      parameters:
+        - in: query
+          name: city
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: City-month scenario rows
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/SensitivityRow"
+  /agent/chat:
+    post:
+      operationId: askOperationsAgent
+      tags: [agent]
+      summary: Ask the operations assistant about forecast data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AgentChatInput"
+      responses:
+        "200":
+          description: Grounded agent answer and tool results
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AgentChatResponse"
+        "400":
+          description: Invalid question
+  /operations/events/extract:
+    post:
+      operationId: extractEventDetails
+      tags: [operations]
+      summary: Extract event dates, locations, and crowd information from source text
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventExtractionInput"
+      responses:
+        "200":
+          description: Structured events extracted from the supplied text
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/StructuredEvent"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    OperationsOverview:
+      type: object
+      properties:
+        cityCount:
+          type: integer
+        totalCrewMonths:
+          type: integer
+        seasonalCrewMonths:
+          type: integer
+        peakCrewCount:
+          type: integer
+        peakMonth:
+          type: string
+        tripWapePct:
+          type: number
+        imbalanceWapePct:
+          type: number
+        actualThrough:
+          type: string
+        forecastTripStarts:
+          type: number
+        dataQualityNote:
+          type: string
+        modelAssumptions:
+          type: array
+          items:
+            type: string
+      required:
+        - cityCount
+        - totalCrewMonths
+        - seasonalCrewMonths
+        - peakCrewCount
+        - peakMonth
+        - tripWapePct
+        - imbalanceWapePct
+        - actualThrough
+        - forecastTripStarts
+        - dataQualityNote
+        - modelAssumptions
+    StaffingMonth:
+      type: object
+      properties:
+        month:
+          type: integer
+        monthName:
+          type: string
+        city:
+          type: string
+        forecastTripStarts:
+          type: number
+        forecastRebalanceProxyBikes:
+          type: number
+        totalCrewsNeeded:
+          type: integer
+        fullTimeCrews:
+          type: integer
+        seasonalCrews:
+          type: integer
+        seasonalHires:
+          type: integer
+        seasonalReleases:
+          type: integer
+        hireBy:
+          type: ["string", "null"]
+        contractNote:
+          type: string
+      required:
+        - month
+        - monthName
+        - city
+        - forecastTripStarts
+        - forecastRebalanceProxyBikes
+        - totalCrewsNeeded
+        - fullTimeCrews
+        - seasonalCrews
+        - seasonalHires
+        - seasonalReleases
+        - hireBy
+        - contractNote
+    BacktestMonth:
+      type: object
+      properties:
+        month:
+          type: integer
+        city:
+          type: string
+        forecastTripStarts:
+          type: number
+        actualTripStarts:
+          type: number
+        tripForecastErrorPct:
+          type: number
+        forecastRebalanceProxyBikes:
+          type: number
+        actualRebalanceProxyBikes:
+          type: number
+        imbalanceForecastErrorPct:
+          type: number
+        plannedCrews:
+          type: integer
+        crewsImpliedByActualProxy:
+          type: integer
+        crewShortfallProxy:
+          type: integer
+        plannedCapacityBikes:
+          type: number
+        capacityShortfallProxyBikes:
+          type: number
+      required:
+        - month
+        - city
+        - forecastTripStarts
+        - actualTripStarts
+        - tripForecastErrorPct
+        - forecastRebalanceProxyBikes
+        - actualRebalanceProxyBikes
+        - imbalanceForecastErrorPct
+        - plannedCrews
+        - crewsImpliedByActualProxy
+        - crewShortfallProxy
+        - plannedCapacityBikes
+        - capacityShortfallProxyBikes
+    SensitivityRow:
+      type: object
+      properties:
+        scenario:
+          type: string
+        month:
+          type: integer
+        city:
+          type: string
+        historicalEbikeShare:
+          type: number
+        ebikeShareScenario:
+          type: number
+        imbalanceBikes:
+          type: number
+        requiredCrews:
+          type: integer
+      required:
+        - scenario
+        - month
+        - city
+        - historicalEbikeShare
+        - ebikeShareScenario
+        - imbalanceBikes
+        - requiredCrews
+    ChatTurn:
+      type: object
+      properties:
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+      required: [role, content]
+    AgentChatInput:
+      type: object
+      properties:
+        question:
+          type: string
+          minLength: 1
+          maxLength: 4000
+        history:
+          type: array
+          items:
+            $ref: "#/components/schemas/ChatTurn"
+          maxItems: 20
+      required: [question]
+    AgentDataBlock:
+      type: object
+      properties:
+        title:
+          type: string
+        json:
+          type: string
+      required: [title, json]
+    AgentChatResponse:
+      type: object
+      properties:
+        answer:
+          type: string
+        toolsUsed:
+          type: array
+          items:
+            type: string
+        dataBlocks:
+          type: array
+          items:
+            $ref: "#/components/schemas/AgentDataBlock"
+      required: [answer, toolsUsed, dataBlocks]
+    EventExtractionInput:
+      type: object
+      properties:
+        sourceText:
+          type: string
+          minLength: 10
+          maxLength: 12000
+      required: [sourceText]
+    StructuredEvent:
+      type: object
+      properties:
+        eventName:
+          type: string
+        startDate:
+          type: ["string", "null"]
+        endDate:
+          type: ["string", "null"]
+        location:
+          type: ["string", "null"]
+        city:
+          type: ["string", "null"]
+        expectedCrowdSize:
+          type: ["integer", "null"]
+        knownParticipantCount:
+          type: ["integer", "null"]
+        confidence:
+          type: string
+          enum: [high, medium, low]
+        sourceText:
+          type: string
+        assumptions:
+          type: array
+          items:
+            type: string
+      required:
+        - eventName
+        - startDate
+        - endDate
+        - location
+        - city
+        - expectedCrowdSize
+        - knownParticipantCount
+        - confidence
+        - sourceText
+        - assumptions
+

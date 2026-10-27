@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "BlueBikes Operations Assistant"
+description = "A Streamlit planning assistant for Bluebikes crews in Boston and nearby cities, with forecast dashboards and a Python LangChain/LangGraph agent."
+version = "1.0.0"
+id = "artifacts/bluebikes-ops"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23421
+
+[services.development]
+run = "uv run --project . streamlit run app.py --server.address 0.0.0.0 --server.headless true --server.port $PORT"
+
+[services.production.build]
+args = [ "uv", "sync", "--project", "." ]
+
+[services.production.run]
+args = [ "bash", "-lc", "uv run --project . streamlit run app.py --server.address 0.0.0.0 --server.headless true --server.port ${PORT:-23421}" ]
+
+[services.production.run.env]
+PORT = "23421"
+
+[services.env]
+PORT = "23421"
+BASE_PATH = "/"
